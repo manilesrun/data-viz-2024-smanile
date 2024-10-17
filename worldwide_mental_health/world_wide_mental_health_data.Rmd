@@ -1,0 +1,46 @@
+---
+title: "world_wide_mental_health_data"
+author: "manile srun"
+date: "2024-10-16"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(readxl)
+library(dplyr)
+```
+
+
+```{r}
+
+world_wide_mental_health_data <- read_excel("data/statistic_id1357952_adults-worldwide-who-said-mental-health-is-their-countrys-leading-health-issue-2023.xlsx", sheet=2, skip = 3)
+
+world_wide_mental_health_data
+```
+
+```{r}
+# Removing NA row 
+world_wide_mental_health_data <- na.omit(world_wide_mental_health_data)
+
+# Check and Rename the columns name
+colnames(world_wide_mental_health_data)
+world_wide_mental_health_data <- world_wide_mental_health_data %>% rename("Percent"="...2")
+
+# Remove 3rd Column 
+world_wide_mental_health_data <- world_wide_mental_health_data %>% select(-3)
+
+world_wide_mental_health_data
+
+```
+
+```{r}
+write.csv(world_wide_mental_health_data, "world_wide_mental_health_data.csv", row.names = FALSE)
+```
+
+
+```
+

@@ -1,0 +1,60 @@
+---
+title: "consultation_mental_health"
+author: "manile srun"
+date: "2024-10-17"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+# Load necessary libraries
+library(readxl)
+library(dplyr)
+```
+
+```{r}
+consultation_mental_health_data <- read_excel("data/Table 6 – Consultations with health professionals for mental health.xlsx", sheet=4, skip = 5)
+
+consultation_mental_health_data
+```
+
+```{r}
+# cleaning data
+consultation_mental_health_data_cleaned <- consultation_mental_health_data %>% head(-16) %>% select(-c(`...6`,`...11`)) %>% filter(!is.na(`...1`)) %>% slice(-1)
+
+consultation_mental_health_data_cleaned
+```
+
+```{r}
+# subsetting data based on gender
+
+male_df <- data.frame(Type=consultation_mental_health_data_cleaned$...1, Disorder_Symptops=consultation_mental_health_data_cleaned$Males,Disorder_no_Symptops=consultation_mental_health_data_cleaned$...3)
+male_df
+female_df <- data.frame(Type=consultation_mental_health_data_cleaned$...1, Disorder_Symptops=consultation_mental_health_data_cleaned$Females,Disorder_no_Symptops=consultation_mental_health_data_cleaned$...8)
+
+all_df <- data.frame(Type=consultation_mental_health_data_cleaned$...1, Disorder_Symptops=consultation_mental_health_data_cleaned$Persons,Disorder_no_Symptops=consultation_mental_health_data_cleaned$...13)
+```
+```{r}
+#combining every dataframe
+
+combined_consultation_mental_health_by_sex_data <- rbind(
+  data.frame(Mental_Health_Professional_Consulted = male_df$Type, Disorder_12_months_Symptops=male_df$Disorder_Symptops, Disorder_no_12_months_Symptops = male_df$Disorder_no_Symptops, Gender = "Male"),
+  data.frame(Mental_Health_Professional_Consulted = female_df$Type, Disorder_12_months_Symptops = female_df$Disorder_Symptops, Disorder_no_12_months_Symptops = female_df$Disorder_no_Symptops,Gender = "Female"),
+  data.frame(Mental_Health_Professional_Consulted = all_df$Type, Disorder_12_months_Symptops = all_df$Disorder_Symptops, Disorder_no_12_months_Symptops = all_df$Disorder_no_Symptops,Gender = "All")
+)
+combined_consultation_mental_health_by_sex_data
+```
+
+
+
+
+```{r}
+
+write.csv(combined_consultation_mental_health_by_sex_data, "combined_consultation_mental_health_by_sex_data.csv", row.names = FALSE)
+str(combined_consultation_mental_health_by_sex_data)
+```
+
+

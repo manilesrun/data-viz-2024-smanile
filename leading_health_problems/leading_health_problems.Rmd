@@ -1,0 +1,43 @@
+---
+title: "Matilda_Viz"
+author: "manile srun"
+date: "2024-10-16"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(readxl)
+library(dplyr)
+```
+
+
+```{r}
+
+leading_health_problems_data <- read_excel("statistic_id917148_leading-health-problems-worldwide-2024.xlsx", sheet=2, skip = 3)
+
+leading_health_problems_data
+```
+
+```{r}
+# Removing NA row 
+leading_health_problems_data <- na.omit(leading_health_problems_data)
+
+# Check and Rename the columns name
+colnames(leading_health_problems_data)
+leading_health_problems_data <- leading_health_problems_data %>% rename("Biggest Health Problems" = "Percentage of adults worldwide who stated select issues were the biggest health problems facing people in their country in 2024","Percent"="...2")
+
+# Remove 3rd Column 
+leading_health_problems_data <- leading_health_problems_data %>% select(-3)
+
+leading_health_problems_data
+
+```
+
+```{r}
+write.csv(leading_health_problems_data, "leading_health_problems.csv", row.names = FALSE)
+```
+

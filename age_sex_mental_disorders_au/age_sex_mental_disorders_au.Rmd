@@ -1,0 +1,36 @@
+---
+title: "age_sex_mental_disorders_au"
+author: "manile srun"
+date: "2024-10-16"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r}
+library(readxl)
+library(dplyr)
+```
+
+
+```{r}
+age_sex_mental_disorders_au_data <- read_excel("data/statistic_id1321970_share-of-population-with-a-mental-disorder-in-australia-fy-2021-by-age-and-sex.xlsx", sheet=2, skip = 4)
+
+age_sex_mental_disorders_au_data
+```
+
+```{r}
+# Check and Rename the columns name
+colnames(age_sex_mental_disorders_au_data)
+age_sex_mental_disorders_au_data <- age_sex_mental_disorders_au_data %>% rename("Age" = "...1")
+
+# Remove last Column 
+age_sex_mental_disorders_au_data <- age_sex_mental_disorders_au_data %>% select(-4)
+
+age_sex_mental_disorders_au_data
+```
+
+```{r}
+write.csv(age_sex_mental_disorders_au_data, "age_sex_mental_disorders_au_data.csv", row.names = FALSE)
+```

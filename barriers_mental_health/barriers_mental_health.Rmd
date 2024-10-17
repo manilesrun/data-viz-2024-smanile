@@ -1,0 +1,32 @@
+---
+title: "barriers_mental_health"
+author: "manile srun"
+date: "2024-10-16"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(readxl)
+library(dplyr)
+```
+
+
+```{r}
+
+barriers_mental_health_data <- read_excel("data/statistic_id1357976_leading-barriers-for-young-people-to-accessing-mental-health-support-australia-2022.xlsx", sheet=2, skip = 3)
+
+barriers_mental_health_data
+```
+
+```{r}
+# Remove NA row
+barriers_mental_health_data <- na.omit(barriers_mental_health_data)
+barriers_mental_health_data
+
+write.csv(barriers_mental_health_data, "barriers_mental_health_data. csv", row.names = FALSE)
+
+```
