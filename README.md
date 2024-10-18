@@ -1,16 +1,23 @@
 <<<<<<< HEAD
+
 # data-viz-2024-smanile
+
 Matilda Viz 2024 - A data visualisation competition
 
 ### Describing the story
+
 This data visualization project aims to underscore mental health as the most critical health issue globally and in Australia. Despite its prevalence, many individuals do not seek professional help, with stigma and confidentiality concerns being the primary barriers to accessing support. Through this narrative, my goal is to raise awareness that addressing this issue goes beyond providing services—it requires a fundamental shift in societal attitudes, breaking down stigmas, and fostering a culture where seeking help is embraced and normalized.
+
 ### Describing how visualization was made
+
 This project is made using:
+
 - React.js: to build the frontend interface
 - Tableau: to viusalize the data
-- R: to clean the raw data to a useful data 
+- R: to clean the raw data to a useful data
 
 #### References:
+
 [https://www-statista-com.ezproxy.canberra.edu.au/statistics/917148/leading-health-problems-worldwide/](https://www-statista-com.ezproxy.canberra.edu.au/statistics/917148/leading-health-problems-worldwide/)
 
 [https://www-statista-com.ezproxy.canberra.edu.au/statistics/1357952/adults-worldwide-mental-health-as-the-leading-health-problem-in-their-country/](https://www-statista-com.ezproxy.canberra.edu.au/statistics/1357952/adults-worldwide-mental-health-as-the-leading-health-problem-in-their-country/)
@@ -21,9 +28,10 @@ This project is made using:
 
 [https://www-statista-com.ezproxy.canberra.edu.au/statistics/1357976/australia-leading-barriers-for-young-people-to-accessing-mental-health-support/](https://www-statista-com.ezproxy.canberra.edu.au/statistics/1357976/australia-leading-barriers-for-young-people-to-accessing-mental-health-support/)
 
+#### \*Note: this project is laptop-based only.
 
-#### *Note: this project is laptop-based.
 =======
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -94,4 +102,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
->>>>>>> 34b2600 (Initialize project using Create React App)
+
+> > > > > > > 34b2600 (Initialize project using Create React App)

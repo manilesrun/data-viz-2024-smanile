@@ -33,7 +33,7 @@ const App = () => {
       {/* First Point */}
       <section className=" m-auto max-w-[62.5rem] min-h-screen flex flex-col justify-center items-center">
         <p className=" pb-10">
-          According to a 2024 Ipsos survey of individuals from 31 countries,{" "}
+          According to a 2024 survey of individuals from 31 countries,{" "}
           <strong>
             45% of respondents identified mental health as the most significant
             health issue facing their nation
@@ -215,7 +215,7 @@ const App = () => {
       {/* First point */}
       <section className=" m-auto max-w-[62.5rem] min-h-screen flex flex-col justify-center items-center mt-[-5rem]">
         <p className=" pb-10 ">
-          Surprisingly, data from the Australian Bureau of Statistics shows that{" "}
+          Surprisingly, the data below shows that{" "}
           <strong>
             52.9% of individuals aged 16–85 with lifetime mental disorders did
             not seek professional help
