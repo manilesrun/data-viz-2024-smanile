@@ -21,6 +21,8 @@ This project is made using:
 
 [https://www-statista-com.ezproxy.canberra.edu.au/statistics/1357976/australia-leading-barriers-for-young-people-to-accessing-mental-health-support/](https://www-statista-com.ezproxy.canberra.edu.au/statistics/1357976/australia-leading-barriers-for-young-people-to-accessing-mental-health-support/)
 
+
+**** Note: this project is laptop-based.
 =======
 # Getting Started with Create React App
 
