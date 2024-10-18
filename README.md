@@ -17,7 +17,7 @@ This project is made using:
 
 [https://www.statista.com/statistics/1321970/australia-share-of-population-with-a-mental-disorder-by-age-and-sex/](https://www.statista.com/statistics/1321970/australia-share-of-population-with-a-mental-disorder-by-age-and-sex/)
 
-[abs.gov.au](abs.gov.au)
+[abs.gov.au](https://www.abs.gov.au/statistics/health/mental-health/national-study-mental-health-and-wellbeing/2020-21/Table%206%20%E2%80%93%20Consultations%20with%20health%20professionals%20for%20mental%20health.xlsx)
 
 [https://www-statista-com.ezproxy.canberra.edu.au/statistics/1357976/australia-leading-barriers-for-young-people-to-accessing-mental-health-support/](https://www-statista-com.ezproxy.canberra.edu.au/statistics/1357976/australia-leading-barriers-for-young-people-to-accessing-mental-health-support/)
 
