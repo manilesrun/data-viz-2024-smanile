@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { FaGithub } from "react-icons/fa";
 
 const App = () => {
   // Create a ref for the Tableau viz container
@@ -375,6 +376,16 @@ const App = () => {
             className="bg-green-300 text-white px-4 py-2 rounded-lg hover:bg-green-400"
           >
             Visit Lifeline Website
+          </a>
+        </div>
+
+        <div className=" flex gap-4 mt-16 justify-end">
+          <FaGithub className=" mt-[0.2rem]" />
+          <a
+            href="https://github.com/manilesrun/data-viz-2024-smanile"
+            className=" hover:text-green-700"
+          >
+            View the code on GitHub
           </a>
         </div>
       </section>
